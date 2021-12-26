@@ -8,12 +8,11 @@
  */
 package pl.gdynia.amw.scdp.rules.exchangeEnergy;
 
-import org.jetbrains.annotations.NotNull;
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 
 public class TechnicalVR1 implements VerificationRule {
-    public boolean runRule(@NotNull Transaction t){
+    public boolean runRule(Transaction t){
         System.out.println("TechnicalVR1 - sourceID != targetID");
         return t.getSourceID() != t.getTargetID();
     }

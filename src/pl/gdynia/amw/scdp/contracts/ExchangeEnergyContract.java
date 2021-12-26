@@ -24,6 +24,7 @@ public final class ExchangeEnergyContract extends SmartContract {
         rulesList.add(new ExpandingVR1());
     }
 
+    @Override
     public boolean checkSC(Transaction tr){
         boolean correct = false;
         for (VerificationRule vR : rulesList) {

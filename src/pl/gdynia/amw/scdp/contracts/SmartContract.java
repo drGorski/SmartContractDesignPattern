@@ -17,6 +17,6 @@ public abstract sealed class SmartContract permits ExchangeEnergyContract {
     // list of verification rules
     protected ArrayList<VerificationRule> rulesList;
 
-    // run verification of the smart contract
+    // verification of the smart contract
     public abstract boolean checkSC(Transaction tr);
 }
