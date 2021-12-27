@@ -11,7 +11,7 @@ package pl.gdynia.amw.scdp.rules.exchangeEnergy;
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 
-public class ExpandingVR1 implements VerificationRule {
+public final class ExpandingVR1 implements VerificationRule {
     public boolean runRule(Transaction t){
         return true;
         //System.out.println("ExpandingVR1 - targetNeed >= quantity");
