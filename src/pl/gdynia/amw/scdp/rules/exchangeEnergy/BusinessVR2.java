@@ -19,3 +19,4 @@ public final class BusinessVR2 implements VerificationRule {
         return t.getSourceSurplus() >= t.getQuantity();
     }
 }
+

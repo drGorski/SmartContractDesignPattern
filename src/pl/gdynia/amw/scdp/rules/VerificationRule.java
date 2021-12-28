@@ -11,3 +11,4 @@ import pl.gdynia.amw.scdp.Transaction;
 public interface VerificationRule {
     boolean runRule(Transaction tr);
 }
+

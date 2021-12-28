@@ -20,3 +20,4 @@ public abstract sealed class SmartContract permits ExchangeEnergyContract {
     // verification of the smart contract
     public abstract boolean checkSC(Transaction tr);
 }
+
