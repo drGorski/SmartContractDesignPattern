@@ -10,12 +10,11 @@ package pl.gdynia.amw.scdp.contracts;
 
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public abstract sealed class SmartContract permits ExchangeEnergyContract {
     // list of verification rules
-    protected ArrayList<VerificationRule> rulesList;
+    protected List<VerificationRule> rulesList;
 
     // verification of the smart contract
     public abstract boolean checkSC(Transaction tr);
