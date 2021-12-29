@@ -9,9 +9,7 @@ package pl.gdynia.amw.scdp.contracts;
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 import pl.gdynia.amw.scdp.rules.exchangeEnergy.*;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public final class ExchangeEnergyContract extends SmartContract {
 
