@@ -26,7 +26,7 @@ class ExchangeEnergyContractTest {
     @Test
     void checkSCNegativeBVR1() {
         SmartContract sC = new ExchangeEnergyContract();
-        Transaction tr = new Transaction(0, 300, 400, 1001, 1001, 100, 100);
+        Transaction tr = new Transaction(0, 300, 400, 1001, 1002, 100, 100);
 
         assertFalse(sC.checkSC(tr));
     }
@@ -34,7 +34,7 @@ class ExchangeEnergyContractTest {
     @Test
     void checkSCNegativeBVR2() {
         SmartContract sC = new ExchangeEnergyContract();
-        Transaction tr = new Transaction(100, 80, 400, 1001, 1001, 100, 100);
+        Transaction tr = new Transaction(100, 80, 400, 1001, 1002, 100, 100);
 
         assertFalse(sC.checkSC(tr));
     }
