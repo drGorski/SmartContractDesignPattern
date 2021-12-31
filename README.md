@@ -1,4 +1,4 @@
-# SmartContractDesignPattern
+# Smart Contract Design Pattern
 
 The implementation of the pattern has been done in Java language version 17.0.1 in the IntelliJ IDEA.
 
