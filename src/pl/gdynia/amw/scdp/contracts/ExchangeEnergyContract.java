@@ -9,19 +9,17 @@ package pl.gdynia.amw.scdp.contracts;
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 import pl.gdynia.amw.scdp.rules.exchangeEnergy.*;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public final class ExchangeEnergyContract extends SmartContract {
 
     public ExchangeEnergyContract(){
-        // create object of rules list
-        rulesList = new ArrayList<>();
-
-        // populate list of verification rules
-        rulesList.add(new TechnicalVR1());
-        rulesList.add(new BusinessVR1());
-        rulesList.add(new BusinessVR2());
-        rulesList.add(new ExpandingVR1());
+        // array-backed list of verification rules
+        rulesList = Arrays.asList(
+                new TechnicalVR1(),
+                new BusinessVR1(),
+                new BusinessVR2(),
+                new ExpandingVR1());
     }
     @Override
     public boolean checkSC(Transaction tr){
