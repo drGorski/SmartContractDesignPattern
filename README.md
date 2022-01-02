@@ -10,7 +10,11 @@ Navigate to: [SCDP source code](https://github.com/drGorski/SmartContractDesignP
 
 ## Tests
 
-Whereas, tests for the implementation have been placed in tests/pl/gdynia/amw/scdp package.
+Whereas, tests for the implementation have been placed in ``tests/pl/gdynia/amw/scdp`` package.
 
-The pattern uses abstract smart contract class and interface for abstract verification rule.
+Navigate to: [SCDP tests](https://github.com/drGorski/SmartContractDesignPattern/tree/master/tests/pl/gdynia/amw/scdp)
+
+## The pattern description
+
+The pattern uses abstract smart contract class and interface for abstract verification rule. Thefollowing pattern layers have been identified: \textit{Abstract} and \textit{Concrete}. The~\textit{Abstract} layer consists of the \textit{SmartContract} abstract class and the \textit{VerificationRule} interface. Whereas, the~\textit{Concrete} layer uses classes implementation-specific for concrete smart contract. Diverse object-oriented paradigms and constructs have been employed in the definition of the pattern. Inheritance allows for providing the common abstract type for smart contracts. Moreover, the interface enforces the implementation of the same validation method.
 
