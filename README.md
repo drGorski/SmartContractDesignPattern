@@ -1,8 +1,8 @@
 # Smart Contract Design Pattern
 
-The implementation of the pattern has been done in Java language version 17 in the IntelliJ IDEA.
+The implementation of the pattern has been written in Java v. 17 using the IntelliJ IDEA.
 
-The Open JDK has also been used: [Open JDK](https://jdk.java.net/17/).
+The Open JDK v. 17.0.1 has been used: [Open JDK](https://jdk.java.net/17/).
 
 ## Source code
 
