@@ -6,6 +6,7 @@
   // rulesList = Arrays.asList(new TechnicalVR1(), new BusinessVR1(), new BusinessVR2(), new ExpandingVR1());
  */
 package pl.gdynia.amw.scdp.contracts;
+
 import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 import pl.gdynia.amw.scdp.rules.exchangeEnergy.*;
