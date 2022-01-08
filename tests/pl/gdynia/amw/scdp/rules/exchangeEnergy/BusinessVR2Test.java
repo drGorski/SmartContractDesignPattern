@@ -14,7 +14,6 @@ class BusinessVR2Test {
     }
     @Test
     void runRuleNegative() {
-        BusinessVR2 businessVR2 = new BusinessVR2();
         Transaction tr = new Transaction(100, 50, 400,
                 1001, 1002, 100, 100);
         assertFalse(businessVR2.runRule(tr));
