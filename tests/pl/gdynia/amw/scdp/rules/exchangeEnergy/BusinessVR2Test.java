@@ -5,7 +5,9 @@ import pl.gdynia.amw.scdp.Transaction;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BusinessVR2Test {
+
     BusinessVR2 businessVR2 = new BusinessVR2();
+
     @Test
     void runRulePositive() {
         Transaction tr = new Transaction(100, 300, 400,
