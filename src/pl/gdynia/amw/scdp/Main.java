@@ -1,6 +1,5 @@
 /*
-  Smart Contract Design Pattern main class
-  for testing purposes
+  Smart Contract Design Pattern - main class for testing purposes.
 
   @author  Tomasz Górski
   @version 1.0

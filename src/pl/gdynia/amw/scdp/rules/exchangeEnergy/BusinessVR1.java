@@ -1,6 +1,6 @@
 /*
-  BusinessVR1 class of concrete verification rule
-  implements VerificationRule interface
+  BusinessVR1 class
+  Concrete verification rule that implements VerificationRule interface.
 
   @author  Tomasz Górski
   @version 1.0
@@ -15,7 +15,12 @@ import pl.gdynia.amw.scdp.rules.VerificationRule;
 public final class BusinessVR1 implements VerificationRule {
     @Override
     public boolean runRule(@NotNull Transaction t){
-        System.out.println("BusinessVR1 - quantity > 0");
-        return t.getQuantity() > 0;
+        if (t.getQuantity() > 0) {
+            System.out.println("BusinessVR1 - quantity > 0");
+            return true;
+        } else {
+            System.out.println("BusinessVR1 - quantity <= 0");
+            return false;
+        }
     }
 }

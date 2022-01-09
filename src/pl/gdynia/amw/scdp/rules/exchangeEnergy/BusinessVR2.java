@@ -1,6 +1,6 @@
 /*
-  BusinessVR2 class of concrete verification rule
-  implements VerificationRule interface
+  BusinessVR2 class
+  Concrete verification rule that implements VerificationRule interface.
 
   @author  Tomasz Górski
   @version 1.0
@@ -15,8 +15,13 @@ import pl.gdynia.amw.scdp.rules.VerificationRule;
 public final class BusinessVR2 implements VerificationRule {
     @Override
     public boolean runRule(@NotNull Transaction t){
-        System.out.println("BusinessVR2 - sourceSurplus >= quantity");
-        return t.getSourceSurplus() >= t.getQuantity();
+        if (t.getSourceSurplus() >= t.getQuantity()) {
+            System.out.println("BusinessVR2 - sourceSurplus >= quantity");
+            return true;
+        } else {
+            System.out.println("BusinessVR2 - sourceSurplus < quantity");
+            return false;
+        }
     }
 }
 

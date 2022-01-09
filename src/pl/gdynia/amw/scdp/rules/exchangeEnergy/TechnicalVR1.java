@@ -1,6 +1,6 @@
 /*
-  TechnicalVR1 class of concrete verification rule
-  implements VerificationRule interface
+  TechnicalVR1 class
+  Concrete verification rule that implements VerificationRule interface.
 
   @author  Tomasz Górski
   @version 1.0
@@ -15,7 +15,12 @@ import pl.gdynia.amw.scdp.rules.VerificationRule;
 public final class TechnicalVR1 implements VerificationRule {
     @Override
     public boolean runRule(@NotNull Transaction t){
-        System.out.println("TechnicalVR1 - sourceID != targetID");
-        return t.getSourceID() != t.getTargetID();
+        if (t.getSourceID() != t.getTargetID()) {
+            System.out.println("TechnicalVR1 - sourceID != targetID");
+            return true;
+        } else {
+            System.out.println("TechnicalVR1 - sourceID == targetID");
+            return false;
+        }
     }
 }

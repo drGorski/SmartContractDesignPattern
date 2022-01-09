@@ -1,10 +1,11 @@
 /*
+  ExchangeEnergyContract class
+  Concrete smart contract class that implements SmartContract abstract class.
+
   @author  Tomasz Górski
   @version 1.0
   @since   2021-12-25
-  // populate fix-sized list of verification rules
-  // rulesList = Arrays.asList(new TechnicalVR1(), new BusinessVR1(), new BusinessVR2(), new ExpandingVR1());
- */
+*/
 package pl.gdynia.amw.scdp.contracts;
 
 import pl.gdynia.amw.scdp.Transaction;

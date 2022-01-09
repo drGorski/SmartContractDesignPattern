@@ -1,5 +1,5 @@
 /*
-  Transaction class
+  Transaction class - encompasses energy exchange among prosumer communities.
 
   @author  Tomasz Górski
   @version 1.0

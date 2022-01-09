@@ -1,14 +1,19 @@
 /*
-  ExpandingVR1 class of concrete verification rule
-  implements VerificationRule interface
+  ExpandingVR1 class
+  Concrete verification rule that implements VerificationRule interface.
 
   @author  Tomasz Górski
   @version 1.0
   @since   2021-12-25
 
-  Planned smart contract reconfiguring:
-  //System.out.println("ExpandingVR1 - targetNeed >= quantity");
-  //return t.getTargetNeed() >= t.getQuantity();
+  Possibility to activate verification rule for smart contract amendment:
+       if (t.getTargetNeed() >= t.getQuantity()) {
+            System.out.println("ExpandingVR1 - targetNeed >= quantity");
+            return true;
+        } else {
+            System.out.println("ExpandingVR1 - targetNeed < quantity");
+            return false;
+        }
  */
 package pl.gdynia.amw.scdp.rules.exchangeEnergy;
 
