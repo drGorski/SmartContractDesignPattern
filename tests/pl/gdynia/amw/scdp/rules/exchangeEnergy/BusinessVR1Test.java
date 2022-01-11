@@ -1,7 +1,5 @@
 package pl.gdynia.amw.scdp.rules.exchangeEnergy;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.gdynia.amw.scdp.Transaction;
 

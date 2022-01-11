@@ -24,7 +24,7 @@ public class Main {
 
         do {
             // new transaction
-            tr = new Transaction(100, 300, 400, 1001, 1002, 100, 100);
+            tr = new Transaction(50, 300, 400, 1001, 1002, 100, 100);
             // verification of transaction
             correct = sC.checkSC(tr);
             System.out.println("Smart contract verification: " + (correct ? "PASS" : "FAIL"));
