@@ -8,7 +8,7 @@
 
 package pl.gdynia.amw.scdp;
 
-public class Transaction {
+public sealed class Transaction permits TransactionCross {
     private double quantity;
     private double sourceSurplus;
     private double targetNeed;

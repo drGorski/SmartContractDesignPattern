@@ -8,8 +8,6 @@
 package pl.gdynia.amw.scdp;
 
 import pl.gdynia.amw.scdp.contracts.ExchangeEnergyContract;
-import pl.gdynia.amw.scdp.contracts.SmartContract;
-
 import java.util.Scanner;
 
 public class Main {
@@ -20,22 +18,23 @@ public class Main {
         boolean repeat;
         Scanner scanS = new Scanner(System.in);
         Transaction tr;
+        TransactionCross trC;
         ExchangeEnergyContract sC = new ExchangeEnergyContract();
 
         do {
             System.out.println(" 1 - transaction within community");
-            System.out.println(" 2 - transaction cross-communites");
+            System.out.println(" 2 - transaction cross-community");
             if (scanS.nextLine().equalsIgnoreCase("1")) {
-                // new transaction within community
+                // new transaction in community
                 tr = new Transaction(100, 300, 400, 20, 10, 1001, 1002, 100, 100);
-                sC.populateRulesStandard();
+                // verification of transaction
+                correct = sC.checkSC(tr);
             } else {
-                // new transaction cross-communites
-                tr = new Transaction(100, 300, 400, 20,10,1001, 1002, 100, 101);
-                sC.populateRulesExtended();
+                // new transaction cross-community
+                trC = new TransactionCross(100, 300, 400, 20,10,1001, 1002, 100, 101);
+                // verification of transaction
+                correct = sC.checkSC(trC);
             }
-            // verification of transaction
-            correct = sC.checkSC(tr);
             System.out.println("Smart contract verification: " + (correct ? "PASS" : "FAIL"));
             System.out.println("Check again? (Y/N)");
             repeat = scanS.nextLine().equalsIgnoreCase("Y");
