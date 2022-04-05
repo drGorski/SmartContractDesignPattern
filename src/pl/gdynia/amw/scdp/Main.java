@@ -2,8 +2,8 @@
   Smart Contract Design Pattern - main class for testing purposes.
 
   @author  Tomasz Górski
-  @version 1.0
-  @since   2021-12-25
+  @version 1.1
+  @since   2022-04-05
  */
 package pl.gdynia.amw.scdp;
 
@@ -20,18 +20,25 @@ public class Main {
         boolean repeat;
         Scanner scanS = new Scanner(System.in);
         Transaction tr;
-        SmartContract sC = new ExchangeEnergyContract();
+        ExchangeEnergyContract sC = new ExchangeEnergyContract();
 
         do {
-            // new transaction
-            tr = new Transaction(50, 300, 400, 1001, 1002, 100, 100);
+            System.out.println(" 1 - transaction within community");
+            System.out.println(" 2 - transaction cross-communites");
+            if (scanS.nextLine().equalsIgnoreCase("1")) {
+                // new transaction within community
+                tr = new Transaction(100, 300, 400, 20, 10, 1001, 1002, 100, 100);
+                sC.populateRulesStandard();
+            } else {
+                // new transaction cross-communites
+                tr = new Transaction(100, 300, 400, 20,10,1001, 1002, 100, 101);
+                sC.populateRulesExtended();
+            }
             // verification of transaction
             correct = sC.checkSC(tr);
             System.out.println("Smart contract verification: " + (correct ? "PASS" : "FAIL"));
-
             System.out.println("Check again? (Y/N)");
             repeat = scanS.nextLine().equalsIgnoreCase("Y");
         } while (repeat);
-
     }
 }

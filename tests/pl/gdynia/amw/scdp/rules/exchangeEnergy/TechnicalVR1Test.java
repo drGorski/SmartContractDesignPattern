@@ -9,12 +9,12 @@ class TechnicalVR1Test {
     TechnicalVR1 technicalVR1 = new TechnicalVR1();
     @Test
     void runRulePositive() {
-        Transaction tr = new Transaction(100, 300, 400, 1001, 1002, 100, 100);
+        Transaction tr = new Transaction(100, 300, 400, 20, 10, 1001, 1002, 100, 100);
         assertTrue(technicalVR1.runRule(tr));
     }
     @Test
     void runRuleNegative() {
-        Transaction tr = new Transaction(100, 50, 400, 1001, 1001, 100, 200);
+        Transaction tr = new Transaction(100, 300, 400, 20, 10, 1001, 1002, 100, 200);
         assertFalse(technicalVR1.runRule(tr));
     }
 }
