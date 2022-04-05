@@ -19,6 +19,7 @@ public final class ExchangeEnergyContract extends SmartContract {
         // array-backed list of verification rules
         rulesList = Arrays.asList(
                 new TechnicalVR1(),
+                new TechnicalVR2(),
                 new BusinessVR1(),
                 new BusinessVR2(),
                 new ExpandingVR1());
