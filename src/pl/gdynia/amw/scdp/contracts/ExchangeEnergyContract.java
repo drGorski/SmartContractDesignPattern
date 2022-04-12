@@ -18,7 +18,10 @@ import java.util.Arrays;
 
 public final class ExchangeEnergyContract extends SmartContract {
 
+    private boolean standardConf;
+
     public ExchangeEnergyContract(){
+        standardConf = true;
         populateRulesStandard();
     }
 
@@ -30,6 +33,7 @@ public final class ExchangeEnergyContract extends SmartContract {
                 new BusinessVR1(),
                 new BusinessVR2(),
                 new ExpandingVR1());
+        System.out.println("Standard loaded");
     }
 
     private void populateRulesExtended(){
@@ -40,15 +44,22 @@ public final class ExchangeEnergyContract extends SmartContract {
                 new BusinessVR1(),
                 new BusinessVR2(),
                 new ExpandingVR1Extended());
+        System.out.println("Extended loaded");
     }
     @Override
     public boolean checkSC(Transaction tr){
-        populateRulesStandard();
+        if (!standardConf) {
+            populateRulesStandard();
+            standardConf = true;
+        }
         return check(tr);
     }
 
     public boolean checkSC(TransactionCross tr){
-        populateRulesExtended();
+        if (standardConf) {
+            populateRulesExtended();
+            standardConf = false;
+        }
         return check(tr);
     }
 
