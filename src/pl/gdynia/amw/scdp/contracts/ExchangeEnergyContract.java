@@ -22,10 +22,6 @@ public final class ExchangeEnergyContract extends SmartContract {
 
     public ExchangeEnergyContract(){
         standardConf = true;
-        populateRulesStandard();
-    }
-
-    private void populateRulesStandard(){
         // populates array-backed list of verification rules
         rulesList = Arrays.asList(
                 new TechnicalVR1(),
@@ -33,18 +29,14 @@ public final class ExchangeEnergyContract extends SmartContract {
                 new BusinessVR1(),
                 new BusinessVR2(),
                 new ExpandingVR1());
-        System.out.println("Standard loaded");
     }
-
+    private void populateRulesStandard(){
+        rulesList.set(0, new TechnicalVR1());
+        rulesList.set(4, new ExpandingVR1());
+    }
     private void populateRulesExtended(){
-        // populates array-backed list of verification rules
-        rulesList = Arrays.asList(
-                new TechnicalVR1Extended(),
-                new TechnicalVR2(),
-                new BusinessVR1(),
-                new BusinessVR2(),
-                new ExpandingVR1Extended());
-        System.out.println("Extended loaded");
+        rulesList.set(0, new TechnicalVR1Extended());
+        rulesList.set(4, new ExpandingVR1Extended());
     }
     @Override
     public boolean checkSC(Transaction tr){
