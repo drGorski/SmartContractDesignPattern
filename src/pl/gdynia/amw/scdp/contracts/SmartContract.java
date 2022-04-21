@@ -12,7 +12,7 @@ import pl.gdynia.amw.scdp.Transaction;
 import pl.gdynia.amw.scdp.rules.VerificationRule;
 import java.util.List;
 
-public abstract sealed class SmartContract permits ExchangeEnergyContract {
+public abstract sealed class SmartContract permits ExchangeEnergyContract, BuyEnergyFromGrid {
     // list of verification rules
     protected List<VerificationRule> rulesList;
 
