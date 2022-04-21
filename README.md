@@ -2,7 +2,7 @@
 
 The implementation of the pattern has been written in Java v. 18 using the IntelliJ IDEA.
 
-The Open JDK v. 18 has been used: [Open JDK](https://jdk.java.net/18/).
+The Open JDK 18.0.1 General-Availability Release has been used: [Open JDK](https://jdk.java.net/18/).
 
 ## Source code
 
@@ -22,7 +22,7 @@ The following pattern layers have been identified: ``Abstract`` and ``Concrete``
 
 The abstract class ``SmartContract`` declares the list of rules and uses the definition of the ``VerificationRule`` interface. The interface defines ``runRule()`` method that must be implemented by concrete verification rule class. 
 
-As an example, the specific ``ExchangeEnergyContract`` class actually implements ``checkSC()`` method that iterates over the list of actual verification rules. Four concrete verification rules have been implemented: one technical, two business, and one expanding. 
+As an example, the specific ``ExchangeEnergyContract`` class actually implements ``checkSC()`` method that iterates over the list of actual verification rules. Five concrete verification rules have been implemented: two technical, two business, and one expanding. 
 
 ## Impact
 
